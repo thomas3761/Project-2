@@ -40,7 +40,7 @@ class SpaceJam(ShowBase):
             # Load the drone model
             drone_model = self.loader.loadModel("Assets/DroneDefender/DroneDefender.obj")
             drone_model.reparentTo(placeholder)
-            drone_model.setScale(10)  # Adjust scale as needed
+            drone_model.setScale(10)  
 
 
     def DrawBaseballSeams(self, centralObject, droneName, step, nunSeams, radius =1):
