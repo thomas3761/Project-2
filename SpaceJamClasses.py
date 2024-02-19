@@ -6,9 +6,12 @@ class Planet(ShowBase):
     def __init__(self, loader: Loader, modelPath: str, parentNode: NodePath, nodeName:str, texPath: str, posVec: Vec3, scaleVec: float):
 
         self.modelNode = loader.loadModel(modelPath)
-        self.modelNode.reparent(parentNode)
+        self.modelNode.reparentTo(parentNode)
         self.modelNode.setPos(posVec)
-        self.modelNode.setCsale(scaleVec)
+        self.modelNode.setScale(scaleVec)
+
+        self.loader = loader
+        self.render = render
 
         self.modelNode.setName(nodeName)
         tex = loader.loadTexture(texPath)
