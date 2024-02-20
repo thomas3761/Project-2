@@ -938,7 +938,7 @@ class TiXmlPrinter(TiXmlVisitor):
     TiXmlPrinter uses the Visitor API.
     @verbatim
     TiXmlPrinter printer;
-    printer.SetIndent( "\\t" );
+    printer.SetIndent( "setScale/setScale/t" );
 
     doc.Accept( &printer );
     fprintf( stdout, "%s", printer.CStr() );
@@ -948,12 +948,12 @@ class TiXmlPrinter(TiXmlVisitor):
     def __init__(self, __param0: TiXmlPrinter = ...) -> None: ...
     def SetIndent(self, _indent: str) -> None:
         """Set the indent characters for printing. By default 4 spaces
-        but tab (\\t) is also useful, or null/empty string for no indentation.
+        but tab (setScale/setScale/t) is also useful, or null/empty string for no indentation.
         """
     def Indent(self) -> str:
         """Query the indention string."""
     def SetLineBreak(self, _lineBreak: str) -> None:
-        """Set the line breaking string. By default set to newline (\\n).
+        """Set the line breaking string. By default set to newline (setScale/setScale/n).
         Some operating systems prefer other characters, or can be
         set to the null/empty string for no indenation.
         """

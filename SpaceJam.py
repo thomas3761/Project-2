@@ -10,16 +10,18 @@ class SpaceJam(ShowBase):
         ShowBase.__init__(self)
         self.setScene()
 
-        self.planet1 = spaceJamClasses.Planet(self.loader, "./Assets/Planets/protoPlanet.x", self.render, "planet1", "./Assets/Planets/Planet 1.jpg", Vec3(150, 5000, 67), 350)
-        self.planet1 = spaceJamClasses.Planet(self.loader, "./Assets/Planets/protoPlanet.x", self.render, "planet2", "./Assets/Planets/planet 2.jpg", Vec3(7314, 1274, 976), 350)
-        self.planet1 = spaceJamClasses.Planet(self.loader, "./Assets/Planets/protoPlanet.x", self.render, "planet3", "./Assets/Planets/planet 3.png", Vec3(11985, 1274, 1112), 350)
-        self.planet1 = spaceJamClasses.Planet(self.loader, "./Assets/Planets/protoPlanet.x", self.render, "planet4", "./Assets/Planets/planet 4.jpg", Vec3(9067, 1274, 2378), 350)
-        self.planet1 = spaceJamClasses.Planet(self.loader, "./Assets/Planets/protoPlanet.x", self.render, "planet5", "./Assets/Planets/planets 5.jpg", Vec3(1382, 1274, 4567), 350)
-        self.planet1 = spaceJamClasses.Planet(self.loader, "./Assets/Planets/protoPlanet.x", self.render, "planet6", "./Assets/Planets/planet 6.png", Vec3(4502, 1274, 6478), 350)
+        self.planet1 = spaceJamClasses.Planet(self.loader, self.render, "./Assets/Planets/protoPlanet.x", self.render, "planet1", "./Assets/Planets/Planet 1.jpg", Vec3(150, 5000, 67), 350)
+        self.planet2 = spaceJamClasses.Planet(self.loader, self.render, "./Assets/Planets/protoPlanet.x", self.render, "planet2", "./Assets/Planets/planet 2.jpg", Vec3(7314, 1274, 976), 350)
+        self.planet3 = spaceJamClasses.Planet(self.loader, self.render, "./Assets/Planets/protoPlanet.x", self.render, "planet3", "./Assets/Planets/planet 3.png", Vec3(11985, 1274, 1112), 350)
+        self.planet4 = spaceJamClasses.Planet(self.loader, self.render, "./Assets/Planets/protoPlanet.x", self.render, "planet4", "./Assets/Planets/planet 4.jpg", Vec3(9067, 1274, 2378), 350)
+        self.planet5 = spaceJamClasses.Planet(self.loader, self.render, "./Assets/Planets/protoPlanet.x", self.render, "planet5", "./Assets/Planets/planets 5.jpg", Vec3(1382, 1274, 4567), 350)
+        self.planet6 = spaceJamClasses.Planet(self.loader, self.render, "./Assets/Planets/protoPlanet.x", self.render, "planet6", "./Assets/Planets/planet 6.png", Vec3(4502, 1274, 6478), 350)
+
 
         self.universe = spaceJamClasses.Universe(self.loader, self.render)
         self.spaceship = spaceJamClasses.Spaceship(self.loader, self.render)
         self.space_station = spaceJamClasses.SpaceStation(self.loader, self.render)
+        
 
         fullCycle = 60
         for j in range(fullCycle):
@@ -47,7 +49,7 @@ class SpaceJam(ShowBase):
         unitVec = defensePaths.BaseballSeams(step, nunSeams, B = 0.4)
         unitVec.normalize()
         position = unitVec* radius * 250 + centralObject.modelNode.getpos()
-        spaceJamClasses.Drone(self.loader,"Assets\DroneDefender\DroneDefender.obj", self.render, droneName,"/Assets/DroneDefender/octotoad1_auv.png", position, 5)
+        spaceJamClasses.Drone(self.loader,"AssetssetScale/DroneDefendersetScale/DroneDefender.obj", self.render, droneName,"/Assets/DroneDefender/octotoad1_auv.png", position, 5)
 
     def setScene(self):
         return
