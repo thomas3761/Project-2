@@ -1787,7 +1787,7 @@ class ButtonHandle:
         for a standard keyboard button).
         """
     def get_ascii_equivalent(self) -> str:
-        """Returns the character code associated with the button, or 'setScale/setScale/0' if no ASCII
+        """Returns the character code associated with the button, or '\\0' if no ASCII
         code was associated.
         """
     def get_alias(self) -> ButtonHandle:
